@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>
     Tarea PHP
-    Escriba aquí su nombre
+    Mario Romero Aguilar
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -45,17 +45,17 @@ function obtenerDatos($datos, $codigos = [], $infoAdicional = null) {
 }
 
 // Pruebas
-echo "Con un parámetro:\n";
+echo "<p>Con un parámetro:</p>";
 foreach (obtenerDatos($datos) as $codigo => $nombre) {
     echo "Código: $codigo, Nombre: $nombre\n";
 }
 
-echo "\nCon dos parámetros:\n";
+echo "<p>Con dos parámetros:</p>";
 foreach (obtenerDatos($datos, ["1020TV", "2050CN", "7025MV"]) as $codigo => $nombre) {
     echo "Código: $codigo, Nombre: $nombre\n";
 }
 
-echo "\nCon tres parámetros:\n";
+echo "<p>Con tres parámetros:</p>";
 foreach (obtenerDatos($datos, ["1518CM", "3065PT", "3560AA"], "precio") as $codigo => $info) {
     echo "Código: $codigo, Nombre: {$info['Nombre']}, Precio: {$info['Precio']}\n";
 }
